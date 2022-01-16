@@ -1,0 +1,34 @@
+  version: "3"
+  services:
+    postgredb:
+      image: postgres
+      container_name: postgredb
+      environment:
+        - POSTGRES_DB=userdb
+        - POSTGRES_USER=admin
+        - POSTGRES_PASSWORD=admin123
+        - PGDATA=/home/altosis/data/postgre
+      ports:
+        - 5000:5432
+      volumes:
+        - pgdata:/var/lib/postgresql/data
+      restart: always
+    springapp:
+      build: .
+      container_name: usermanagementapi
+      environment:
+        SPRING_DATASOURCE_URL: jdbc:postgresql://postgredb:5432/userdb?createDatabaseIfNotExist=true
+        SPRING_DATASOURCE_USERNAME: admin
+        SPRING_DATASOURCE_PASSWORD: admin123
+        SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      ports:
+        - 8080:8080
+      restart: always
+      depends_on:
+        - postgredb
+  networks:
+    docshiftnetwork:
+      driver: bridge
+
+  volumes:
+    pgdata:
