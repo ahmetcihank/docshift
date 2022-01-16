@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "783b988c-5d35-4f7f-b763-8014e581f164",
+		"name": "docshiftusermgmntapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/delete/cihan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"delete",
+						"cihan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"gender\":\"MALE\",\n    \"phoneNumber\":\"123123\",\n     \"address\":\"address\",\n    \"username\":\"cihan\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/profile/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"profile",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER CREATE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"denem112e\",\n    \"lastName\":\"denemee12\",\n    \"username\":\"cihan\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":2,\n    \"name\":\"denem112e\",\n    \"lastName\":\"denemee12\",\n    \"username\":\"cihan\",\n    \"gender\":\"MALE\",\n    \"phoneNumber\":\"123123\",\n     \"address\":\"addressupdated\",\n     \"dateOfBirth\":\"2012-12-01\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allusersWithProfiles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8787/user/cihankk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8787",
+					"path": [
+						"user",
+						"cihankk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allusers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8787/user/cihankk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8787",
+					"path": [
+						"user",
+						"cihankk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get by username",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/cihan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"cihan"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
